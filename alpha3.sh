@@ -30,7 +30,7 @@ then
     fi
 fi
 
-sudo pacman -Sy --needed xorg xorg-apps plasma lightdm lightdm-gtk-greeter gnome-system-monitor gedit evince \
+sudo pacman -Sy --needed xorg plasma lightdm lightdm-gtk-greeter gnome-system-monitor gnome-terminal gedit evince \
 pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-jack pulseaudio-lirc pulseaudio-zeroconf \
 neofetch bluez bluez-utils blueman noto-fonts ttf-liberation ttf-droid ttf-ubuntu-font-family ttf-roboto ttf-liberation \
 chromium git base-devel xdg-user-dirs lsb-release go jdk11-openjdk bash --noconfirm
@@ -38,4 +38,3 @@ chromium git base-devel xdg-user-dirs lsb-release go jdk11-openjdk bash --noconf
 sudo systemctl enable lightdm
 sudo systemctl enable bluetooth.service
 sudo xdg-user-dirs-update
-sudo rm -rf /etc/profile/alpha3.sh
