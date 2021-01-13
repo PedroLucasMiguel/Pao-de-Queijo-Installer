@@ -79,9 +79,10 @@ systemctl enable NetworkManager
 USERNAME=$(dialog --title "Nome de usuario" --inputbox "Digite o nome do seu usuario:" 0 0 --stdout)
 PASSROOT=$(dialog --title "Senha de ADM/Usuario" --inputbox "Digite uma senha para seu usuario:" 0 0 --stdout)
 clear
+echo "%wheel      ALL=(ALL) ALL" >> /etc/sudoers
 echo "root:${PASSROOT}" | chpasswd
-useradd -m ${USERNAME}
+useradd -mg wheel ${USERNAME}
 echo "${USERNAME}:${PASSROOT}" | chpasswd
-echo "${USERNAME}  ALL=(ALL:ALL) ALL" >> /etc/sudoers 
+echo "${USERNAME}   ALL=(ALL) ALL" >> /etc/sudoers
 clear
 exit
