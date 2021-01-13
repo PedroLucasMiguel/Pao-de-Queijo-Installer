@@ -149,7 +149,10 @@ then
 	curl -L https://raw.githubusercontent.com/PedroLucasMiguel/Pao-de-Queijo-Installer/main/alpha2.sh > alpha2.sh
 	mv alpha2.sh /mnt
 	chmod +x /mnt/alpha2.sh
+	chmod +x /etc/profile/alpha3.sh
 	arch-chroot /mnt ./alpha2.sh
+	curl -L https://raw.githubusercontent.com/PedroLucasMiguel/Pao-de-Queijo-Installer/main/alpha3.sh > mnt/etc/profile/alpha3.sh
+	chmod +x /etc/profile/alpha3.sh
 	umount -R /mnt
 	dialog --title "Instalação base concluida!" --msgbox "Após o sistema reiniciar, entre no seu usuario e o resto\
 	da instalação sera feita!" 0 0 
