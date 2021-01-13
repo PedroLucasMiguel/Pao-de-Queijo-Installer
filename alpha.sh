@@ -146,7 +146,7 @@ then
 	echo "Boot"
 	mkdir /mnt/boot/EFI
 	mount ${DISK}1 /mnt/boot/EFI
-	curl -L https://raw.githubusercontent.com/PedroLucasMiguel/archfi/master/alpha2.sh > alpha2.sh
+	curl -L https://raw.githubusercontent.com/PedroLucasMiguel/Pao-de-Queijo-Installer/main/alpha2.sh > alpha2.sh
 	mv alpha2.sh /mnt
 	chmod +x /mnt/alpha2.sh
 	arch-chroot /mnt ./alpha2.sh
