@@ -70,7 +70,7 @@ pacman -Sy grub efibootmgr dosfstools os-prober mtools --noconfirm
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
 
-pacman -Sy networkmanager --noconfirm
+pacman -Sy networkmanager sudo --noconfirm
 systemctl enable NetworkManager
 
 ##############################################################################################
@@ -82,8 +82,6 @@ clear
 echo "root:${PASSROOT}" | chpasswd
 useradd -m ${USERNAME}
 echo "${USERNAME}:${PASSROOT}" | chpasswd
-usermod -aG wheel,audio,video,optical,storage ${USERNAME}
-pacamn -Sy sudo --noconfirm
 echo "${USERNAME}  ALL=(ALL:ALL) ALL" >> /etc/sudoers 
 clear
 exit

@@ -151,6 +151,8 @@ then
 	chmod +x /mnt/alpha2.sh
 	arch-chroot /mnt ./alpha2.sh
 	umount -R /mnt
+	dialog --title "Instalação base concluida!" --msgbox "Após o sistema reiniciar, entre no seu usuario e o resto\
+	da instalação sera feita!" 0 0 
 	reboot
 
 else
