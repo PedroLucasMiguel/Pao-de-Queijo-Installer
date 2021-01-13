@@ -2,6 +2,7 @@
 #								Instalando dependencias/utils
 ##############################################################################################
 
+sudo su
 pacman -S dialog --noconfirm
 pacman -S nano sed --noconfirm
 

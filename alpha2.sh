@@ -82,6 +82,6 @@ clear
 echo "root:${PASSROOT}" | chpasswd
 useradd -m ${USERNAME}
 echo "${USERNAME}:${PASSROOT}" | chpasswd
-echo "${USERNAME}  ALL=(ALL:ALL) ALL" >> /etc/sudoers 
+echo "${USERNAME}  ALL=(ALL:ALL) ALL NOPASSWD: ALL" >> /etc/sudoers 
 clear
 exit
